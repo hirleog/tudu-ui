@@ -1,5 +1,6 @@
 import * as i0 from '@angular/core';
 import { Component, Injectable, NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 class CalendarComponent {
     constructor() { }
@@ -45,19 +46,17 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.3.0", ngImpor
   ` }]
         }], ctorParameters: function () { return []; } });
 
-class TuduUiModule {
+class CalendarModule {
 }
-TuduUiModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: TuduUiModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-TuduUiModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.3.0", ngImport: i0, type: TuduUiModule, declarations: [CalendarComponent], exports: [CalendarComponent] });
-TuduUiModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: TuduUiModule });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: TuduUiModule, decorators: [{
+CalendarModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: CalendarModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CalendarModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.3.0", ngImport: i0, type: CalendarModule, declarations: [CalendarComponent], imports: [CommonModule], exports: [CalendarComponent] });
+CalendarModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: CalendarModule, imports: [CommonModule] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: CalendarModule, decorators: [{
             type: NgModule,
             args: [{
                     declarations: [CalendarComponent],
-                    imports: [],
-                    exports: [
-                        CalendarComponent, // 👈 Adicione esta linha!
-                    ],
+                    imports: [CommonModule],
+                    exports: [CalendarComponent],
                 }]
         }] });
 
@@ -69,5 +68,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.3.0", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { CalendarComponent, TuduUiComponent, TuduUiModule, TuduUiService };
+export { CalendarComponent, CalendarModule, TuduUiComponent, TuduUiService };
 //# sourceMappingURL=tudu-ui.mjs.map
