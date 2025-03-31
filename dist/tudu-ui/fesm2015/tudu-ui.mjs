@@ -1,5 +1,17 @@
 import * as i0 from '@angular/core';
-import { Injectable, Component, NgModule } from '@angular/core';
+import { Component, Injectable, NgModule } from '@angular/core';
+
+class CalendarComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+CalendarComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: CalendarComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+CalendarComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.3.0", type: CalendarComponent, selector: "lib-calendar", ngImport: i0, template: "<p>calendar works!</p>\r\n", styles: [""] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: CalendarComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'lib-calendar', template: "<p>calendar works!</p>\r\n" }]
+        }], ctorParameters: function () { return []; } });
 
 class TuduUiService {
     constructor() { }
@@ -33,35 +45,19 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.3.0", ngImpor
   ` }]
         }], ctorParameters: function () { return []; } });
 
-class CalendarComponent {
-    constructor() { }
-    ngOnInit() {
-    }
-}
-CalendarComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: CalendarComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-CalendarComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.3.0", type: CalendarComponent, selector: "lib-calendar", ngImport: i0, template: "<p>calendar works!</p>\n", styles: [""] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: CalendarComponent, decorators: [{
-            type: Component,
-            args: [{ selector: 'lib-calendar', template: "<p>calendar works!</p>\n" }]
-        }], ctorParameters: function () { return []; } });
-
 class TuduUiModule {
 }
 TuduUiModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: TuduUiModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-TuduUiModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.3.0", ngImport: i0, type: TuduUiModule, declarations: [TuduUiComponent,
-        CalendarComponent], exports: [TuduUiComponent] });
+TuduUiModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.3.0", ngImport: i0, type: TuduUiModule, declarations: [CalendarComponent], exports: [CalendarComponent] });
 TuduUiModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: TuduUiModule });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: TuduUiModule, decorators: [{
             type: NgModule,
             args: [{
-                    declarations: [
-                        TuduUiComponent,
-                        CalendarComponent
-                    ],
+                    declarations: [CalendarComponent],
                     imports: [],
                     exports: [
-                        TuduUiComponent
-                    ]
+                        CalendarComponent, // 👈 Adicione esta linha!
+                    ],
                 }]
         }] });
 
@@ -73,5 +69,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.3.0", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { TuduUiComponent, TuduUiModule, TuduUiService };
+export { CalendarComponent, TuduUiComponent, TuduUiModule, TuduUiService };
 //# sourceMappingURL=tudu-ui.mjs.map
